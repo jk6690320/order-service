@@ -1,4 +1,4 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka.team-h.cloud.school.thoughtworks.cn/
+      defaultZone: http://eureka.team-h.cloud.school.thoughtworks.cn/eureka/
