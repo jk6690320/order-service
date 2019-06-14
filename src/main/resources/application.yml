@@ -1,4 +1,9 @@
+server:
+  port: 9082
+
 spring:
+  application:
+    name: order-service
   datasource:
     url: jdbc:h2:mem:order_service_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;INIT=CREATE SCHEMA IF NOT EXISTS order_service_db
     platform: h2
@@ -43,4 +48,8 @@ feign:
   hystrix:
     enabled: true
 
-#TODO: config actuator endpoints to expose
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
